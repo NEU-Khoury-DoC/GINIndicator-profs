@@ -21,14 +21,19 @@ st.write("### Throw a new button down here to access a new page you've built")
 if st.button("Paulo's home page design", 
              type='primary',
              use_container_width=True):
-  st.switch_page("pages/98_Paulo_Homepage.py")
+  st.switch_page("pages/97_Paulo_Homepage.py")
 
-if st.button('Secret Button', 
-             type='primary',
-             use_container_width=True):
-  st.balloons
-
-if st.button('Another Secret Button', 
+if st.button('Replace these with links to pages like above', 
              type='secondary',
              use_container_width=True):
-  st.balloons
+  st.balloons()
+
+if st.button('Replaceee these with links to pages like above', 
+             type='primary',
+             use_container_width=True):
+  st.balloons()
+
+if st.button('Replacee these with links to pages like above', 
+             type='secondary',
+             use_container_width=True):
+  st.balloons()

@@ -34,15 +34,30 @@ SideBarLinks(show_home=True)
 
 # set the title of the page and provide a simple prompt. 
 logger.info("Loading the Home page of the app")
-st.title('CS 4973 Sample DoC Project App')
+st.title('THIS IS THE UI UX DEV ENVIRONTMENT')
 st.write('\n\n')
-st.write('### 2025 Summer 1 Dialogue of Civilizations')
+st.write('### Unless someone merged this to main...')
 st.write('\n')
-st.write('#### HI! As which user would you like to log in?')
+st.write('#### For the sake of hopping to the dev page, please click the button immediately below.')
 
 # For each of the user personas for which we are implementing
 # functionality, we put a button on the screen that the user 
 # can click to MIMIC logging in as that mock user. 
+
+if st.button("Go to List of Pages", 
+            type = 'primary', 
+            use_container_width=True):
+    # when user clicks the button, they are now considered authenticated
+    st.session_state['authenticated'] = True
+    # we set the role of the current user
+    st.session_state['role'] = 'ux_dev'
+    # we add the first name of the user (so it can be displayed on 
+    # subsequent pages). 
+    st.session_state['first_name'] = 'ux_dev_Alp_Berrak'
+    # finally, we ask streamlit to switch to another page, in this case, the 
+    # landing page for this particular user type
+    logger.info("Jumping through a time warp to the dev landing page")
+    st.switch_page('pages/98_Legendary_UX_Design_HQ.py')
 
 if st.button("Act as John, a Political Strategy Advisor", 
             type = 'primary', 

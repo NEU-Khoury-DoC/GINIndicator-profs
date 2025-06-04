@@ -44,7 +44,6 @@ with b1:
         st.session_state["role"] = "Voter"
         st.session_state["first_name"] = "Prince Maximilian"
         st.success("Logged in as Voter")
-        st.switch_page("Home.py")
 
 with b2:
     if st.button("Log in as Politician,\nJT Nance", use_container_width=True):
